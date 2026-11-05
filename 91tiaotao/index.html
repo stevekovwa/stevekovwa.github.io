@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91挑桃-挑桃选购指南_桃品挑选技巧与当季鲜桃推荐</title>
+<meta name="description" content="91挑桃是一个专注鲜桃挑选与选购的指南站点，整理当季桃品挑选技巧、品种风味对比与到手验货要点，帮助你在不同季节挑到合适的桃子。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='38' r='20' fill='%23e8576b'/%3E%3Cpath d='M32 18c2-8 10-12 16-11-2 8-8 13-16 14z' fill='%236a9e46'/%3E%3Cpath d='M32 22c-3-6-9-9-15-8 3 7 8 10 15 11z' fill='%2384b95c'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --peach:#e8576b;
+    --peach-deep:#c53a52;
+    --peach-soft:#fdeef0;
+    --leaf:#5c8a43;
+    --leaf-soft:#eef4e7;
+    --ink:#2c2320;
+    --ink-soft:#6b5d57;
+    --line:#eee2dd;
+    --paper:#fffaf7;
+    --card:#ffffff;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto;}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,247,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:12px 0;
+  }
+  .logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .logo-mark{width:38px;height:38px;flex:0 0 auto;}
+  .logo-text{
+    font-size:20px;font-weight:800;letter-spacing:.5px;
+    color:var(--peach-deep);
+  }
+  nav.main-nav ul{
+    display:flex;align-items:center;gap:22px;
+    list-style:none;font-size:15px;color:var(--ink-soft);
+  }
+  nav.main-nav a{padding:6px 2px;border-bottom:2px solid transparent;transition:.2s;}
+  nav.main-nav a:hover{color:var(--peach-deep);border-bottom-color:var(--peach);}
+  .nav-cta{
+    display:inline-block;padding:9px 18px;border-radius:999px;
+    background:var(--peach);color:#fff;font-size:14px;font-weight:600;
+    transition:.2s;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--peach-deep);}
+  .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:7px 10px;cursor:pointer;}
+  .nav-toggle svg{width:20px;height:20px;}
+
+  @media (max-width:820px){
+    nav.main-nav{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      background:var(--card);border-bottom:1px solid var(--line);
+      box-shadow:0 12px 24px rgba(120,60,50,.08);
+    }
+    nav.main-nav.open{display:block;}
+    nav.main-nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 18px;}
+    nav.main-nav a{display:block;padding:12px 4px;border-bottom:1px solid var(--line);}
+    .nav-toggle{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--ink-soft);}
+    .nav-bar{position:relative;}
+    .nav-cta{display:none;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 82% 18%,rgba(232,87,107,.14),transparent 46%),
+      radial-gradient(circle at 8% 88%,rgba(92,138,67,.14),transparent 44%),
+      linear-gradient(180deg,#fff7f4 0%,#fffaf7 100%);
+    padding:56px 0 62px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;
+    gap:44px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;color:var(--leaf);
+    background:var(--leaf-soft);border-radius:999px;
+    padding:5px 14px;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--leaf);}
+  .hero h1{
+    font-size:clamp(30px,4.4vw,50px);
+    line-height:1.18;
+    font-weight:800;
+    letter-spacing:.5px;
+    color:var(--peach-deep);
+    margin-bottom:18px;
+  }
+  .hero-lead{
+    font-size:16.5px;color:var(--ink-soft);
+    max-width:34em;margin-bottom:26px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 26px;border-radius:999px;font-size:15px;font-weight:600;
+    transition:.2s;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--peach);color:#fff;box-shadow:0 8px 20px rgba(232,87,107,.28);}
+  .btn-primary:hover{background:var(--peach-deep);}
+  .btn-ghost{background:#fff;color:var(--peach-deep);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--peach);}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:26px;font-size:14px;color:var(--ink-soft);}
+  .hero-meta b{display:block;font-size:20px;color:var(--peach-deep);font-weight:800;line-height:1.3;}
+  .hero-art{
+    position:relative;
+    background:#fff;border-radius:26px;
+    padding:22px;border:1px solid var(--line);
+    box-shadow:0 22px 48px rgba(150,70,60,.12);
+  }
+  .hero-art figcaption{
+    font-size:12.5px;color:var(--ink-soft);text-align:center;margin-top:10px;
+  }
+  @media (max-width:820px){
+    .hero{padding:38px 0 44px;}
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .hero-art{order:-1;max-width:360px;margin:0 auto;padding:16px;border-radius:20px;}
+    .hero h1{font-size:clamp(28px,8vw,38px);}
+    .hero-lead{font-size:15.5px;}
+    .hero-meta{gap:18px;}
+  }
+
+  /* ---------- section base ---------- */
+  section{padding:58px 0;}
+  .sec-head{max-width:44em;margin-bottom:34px;}
+  .sec-tag{
+    font-size:13px;font-weight:700;letter-spacing:2px;
+    color:var(--leaf);text-transform:uppercase;margin-bottom:10px;
+  }
+  .sec-head h2{
+    font-size:clamp(22px,2.6vw,30px);font-weight:800;
+    line-height:1.35;color:var(--ink);margin-bottom:12px;
+  }
+  .sec-head p{color:var(--ink-soft);font-size:15.5px;}
+  .alt-bg{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+
+  /* ---------- steps ---------- */
+  .steps{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+    counter-reset:step;
+  }
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 22px;position:relative;transition:.2s;
+  }
+  .step:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(150,80,70,.10);}
+  .step::before{
+    counter-increment:step;content:"0" counter(step);
+    display:block;font-size:13px;font-weight:800;letter-spacing:1px;
+    color:var(--peach);margin-bottom:10px;
+  }
+  .step h3{font-size:17.5px;font-weight:700;margin-bottom:8px;}
+  .step p{font-size:14.5px;color:var(--ink-soft);}
+  @media (max-width:820px){
+    .steps{grid-template-columns:1fr;}
+  }
+
+  /* ---------- varieties ---------- */
+  .variety-tools{
+    display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;
+  }
+  .chip{
+    border:1px solid var(--line);background:#fff;color:var(--ink-soft);
+    font-size:14px;padding:8px 18px;border-radius:999px;cursor:pointer;
+    transition:.18s;font-family:inherit;
+  }
+  .chip:hover{border-color:var(--peach);color:var(--peach-deep);}
+  .chip.active{background:var(--peach);border-color:var(--peach);color:#fff;font-weight:600;}
+  .variety-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .variety{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;display:flex;flex-direction:column;transition:.2s;
+  }
+  .variety:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(150,80,70,.10);}
+  .variety .thumb{background:var(--peach-soft);padding:18px 18px 6px;}
+  .variety .thumb svg{width:100%;height:auto;}
+  .variety .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .variety h3{font-size:17px;font-weight:700;}
+  .variety .season{
+    align-self:flex-start;font-size:12px;font-weight:600;
+    color:var(--leaf);background:var(--leaf-soft);
+    padding:3px 10px;border-radius:999px;
+  }
+  .variety p{font-size:14.5px;color:var(--ink-soft);}
+  .variety .tags{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;}
+  .variety .tags span{
+    font-size:12.5px;color:var(--peach-deep);
+    background:var(--peach-soft);border-radius:6px;padding:2px 8px;
+  }
+  .empty-tip{
+    grid-column:1/-1;text-align:center;color:var(--ink-soft);
+    font-size:15px;padding:30px 0;
+  }
+  @media (max-width:900px){.variety-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:620px){.variety-grid{grid-template-columns:1fr;}}
+
+  /* ---------- checklist ---------- */
+  .check-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:38px;align-items:start;}
+  .check-art{
+    background:linear-gradient(160deg,#fdeef0,#eef4e7);
+    border-radius:22px;padding:28px;border:1px solid var(--line);
+  }
+  .check-art svg{width:100%;height:auto;}
+  .check-list{list-style:none;display:grid;gap:14px;}
+  .check-list li{
+    display:flex;gap:14px;align-items:flex-start;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:16px 18px;
+  }
+  .check-list .mark{
+    flex:0 0 auto;width:26px;height:26px;border-radius:50%;
+    background:var(--leaf-soft);color:var(--leaf);
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:800;
+  }
+  .check-list h3{font-size:16px;font-weight:700;margin-bottom:3px;}
+  .check-list p{font-size:14.5px;color:var(--ink-soft);}
+  @media (max-width:820px){.check-layout{grid-template-columns:1fr;gap:26px;}}
+
+  /* ---------- faq ---------- */
+  .faq{display:grid;gap:14px;max-width:52em;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:0 20px;
+  }
+  details[open]{border-color:rgba(232,87,107,.35);}
+  summary{
+    list-style:none;cursor:pointer;padding:17px 0;
+    font-size:16px;font-weight:700;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";font-size:20px;font-weight:400;color:var(--peach);
+    transition:.2s;flex:0 0 auto;
+  }
+  details[open] summary::after{content:"–";}
+  details p{padding:0 0 18px;font-size:14.8px;color:var(--ink-soft);}
+
+  /* ---------- download ---------- */
+  .download-band{
+    background:linear-gradient(135deg,#c53a52,#e8576b 60%,#ef7f8f);
+    color:#fff;border-radius:24px;padding:40px 36px;
+    display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center;
+  }
+  .download-band h2{font-size:clamp(21px,2.6vw,27px);font-weight:800;margin-bottom:10px;line-height:1.35;}
+  .download-band p{font-size:15px;color:rgba(255,255,255,.9);}
+  .download-band .btn-download{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    width:100%;padding:14px 22px;border-radius:999px;
+    background:#fff;color:var(--peach-deep);font-weight:700;font-size:15.5px;
+  }
+  .download-band small{display:block;font-size:12.5px;color:rgba(255,255,255,.82);margin-top:10px;text-align:center;}
+  @media (max-width:760px){
+    .download-band{grid-template-columns:1fr;padding:30px 24px;border-radius:20px;}
+  }
+
+  /* ---------- footer ---------- */
+  footer.site{
+    background:#2c2320;color:#cfc3bd;padding:44px 0 26px;font-size:14px;
+    margin-top:58px;
+  }
+  .foot-top{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;
+    padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .foot-brand .logo-text{color:#ffb3bf;font-size:18px;}
+  .foot-brand svg{width:32px;height:32px;}
+  footer.site p{color:#a99a94;line-height:1.8;}
+  footer.site h3{font-size:15px;color:#fff;margin-bottom:12px;font-weight:700;}
+  footer.site ul{list-style:none;display:grid;gap:8px;}
+  footer.site ul a{color:#a99a94;transition:.2s;}
+  footer.site ul a:hover{color:#ffb3bf;}
+  .foot-bottom{
+    padding-top:20px;display:flex;flex-wrap:wrap;gap:10px;
+    justify-content:space-between;font-size:13px;color:#8d7d76;
+  }
+  @media (max-width:760px){
+    .foot-top{grid-template-columns:1fr;gap:24px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-bar">
+    <a class="logo" href="#top" aria-label="91挑桃 首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="40" r="19" fill="#e8576b"/>
+        <circle cx="25" cy="34" r="5" fill="#f7a9b4" opacity=".8"/>
+        <path d="M32 21c2-8 10-12 16-11-2 8-8 13-16 14z" fill="#6a9e46"/>
+        <path d="M32 24c-3-6-9-9-15-8 3 7 8 10 15 11z" fill="#84b95c"/>
+      </svg>
+      <span class="logo-text">91挑桃</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+      导航
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="主导航">
+      <ul>
+        <li><a href="#steps">挑选步骤</a></li>
+        <li><a href="#varieties">品种风味</a></li>
+        <li><a href="#checklist">到手验货</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#download">挑桃手册</a></li>
+      </ul>
+    </nav>
+
+    <a class="nav-cta" href="#varieties">看当季桃品</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">鲜桃挑选与选购指南</span>
+        <h1>91挑桃</h1>
+        <p class="hero-lead">
+          91挑桃把挑桃这件事拆成看得懂、用得上的步骤：先看季节，再看品种，最后上手验。无论你在市场摊位前，还是在生鲜页面上滑动，都能按同一套顺序做判断，少买错、少放坏。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#steps">开始学挑桃</a>
+          <a class="btn btn-ghost" href="#varieties">按品种筛选</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>3</b>步挑选顺序</div>
+          <div><b>6</b>类常见品种</div>
+          <div><b>5</b>项到手验货</div>
+        </div>
+      </div>
+
+      <figure class="hero-art">
+        <svg viewBox="0 0 320 260" role="img" aria-label="一篮鲜桃的插画">
+          <ellipse cx="160" cy="232" rx="118" ry="16" fill="#f4dcd8"/>
+          <path d="M62 150h196l-18 74a18 18 0 0 1-18 15H98a18 18 0 0 1-18-15z" fill="#c98b52"/>
+          <path d="M62 150h196l-6 24H68z" fill="#b0763f"/>
+          <circle cx="118" cy="128" r="34" fill="#e8576b"/>
+          <circle cx="108" cy="118" r="10" fill="#f7a9b4" opacity=".75"/>
+          <path d="M118 96c3-9 11-13 18-12-2 9-9 14-18 15z" fill="#6a9e46"/>
+          <circle cx="196" cy="122" r="38" fill="#ef7183"/>
+          <circle cx="185" cy="110" r="11" fill="#f9bcc4" opacity=".8"/>
+          <path d="M196 86c3-9 12-14 19-13-2 10-10 15-19 16z" fill="#84b95c"/>
+          <circle cx="158" cy="150" r="30" fill="#f08a5d"/>
+          <circle cx="150" cy="142" r="9" fill="#f8c3a4" opacity=".8"/>
+          <path d="M158 122c3-8 10-12 16-11-2 8-8 12-16 13z" fill="#6a9e46"/>
+          <ellipse cx="246" cy="150" rx="22" ry="18" fill="#f2a0ad"/>
+          <ellipse cx="74" cy="152" rx="20" ry="16" fill="#f2a0ad"/>
+        </svg>
+        <figcaption>按季节与品种挑桃，比只看颜色更可靠</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Step by Step</div>
+        <h2>91挑桃的三步挑选顺序</h2>
+        <p>挑桃不是背口诀，而是把注意力放在能验证的地方。顺序固定下来，逛市场时就不容易被打折和外观带偏。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>先定季节</h3>
+          <p>桃子是强季节水果。早熟品种多在初夏上市，脆桃与晚熟品种延续到夏末初秋。先确认当前是不是这批桃的自然产期，再谈品质，比反季节尝鲜更稳妥。</p>
+        </article>
+        <article class="step">
+          <h3>再挑品种</h3>
+          <p>想吃脆的还是软的，先选品种再选果。脆桃重手感，软桃重香气；油桃看表皮光泽，毛桃看绒毛完整。91挑桃建议按吃法倒推品种，而不是只看个头。</p>
+        </article>
+        <article class="step">
+          <h3>最后上手验</h3>
+          <p>看果缝是否饱满、闻果蒂有无清香、轻按肩部有无弹性。三处都过关再装袋，回家后按软硬分批存放，避免一篮里熟果催坏生果。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VARIETIES -->
+  <section id="varieties" class="alt-bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Varieties</div>
+        <h2>按口感筛选常见桃品</h2>
+        <p>下面的分类按吃法与表皮特征整理，方便你在摊位上快速对上号。点击标签切换，看看哪一类更接近你想要的口感。</p>
+      </div>
+
+      <div class="variety-tools" role="group" aria-label="按口感筛选品种">
+        <button class="chip active" data-filter="all" type="button">全部</button>
+        <button class="chip" data-filter="crisp" type="button">脆桃</button>
+        <button class="chip" data-filter="soft" type="button">软桃</button>
+        <button class="chip" data-filter="nectarine" type="button">油桃</button>
+      </div>
+
+      <div class="variety-grid" id="varietyGrid">
+        <article class="variety" data-type="crisp">
+          <div class="thumb">
+            <svg viewBox="0 0 200 120" role="img" aria-label="脆桃插画">
+              <circle cx="100" cy="70" r="38" fill="#e8576b"/>
+              <circle cx="88" cy="58" r="11" fill="#f7a9b4" opacity=".75"/>
+              <path d="M100 36c3-9 11-13 18-12-2 9-9 14-18 15z" fill="#6a9e46"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="season">初夏至夏末</span>
+            <h3>脆桃</h3>
+            <p>果肉紧实，咬下去有明显脆响，适合喜欢咀嚼感的人。挑选时优先选手感沉、果缝清晰、肩部略硬的果子。</p>
+            <div class="tags"><span>口感脆</span><span>耐运输</span></div>
+          </div>
+        </article>
+
+        <article class="variety" data-type="soft">
+          <div class="thumb">
+            <svg viewBox="0 0 200 120" role="img" aria-label="软桃插画">
+              <circle cx="100" cy="70" r="40" fill="#ef7183"/>
+              <circle cx="87" cy="56" r="12" fill="#f9bcc4" opacity=".8"/>
+              <path d="M100 34c3-9 12-14 19-13-2 10-10 15-19 16z" fill="#84b95c"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="season">盛夏为主</span>
+            <h3>软桃</h3>
+            <p>果肉细腻多汁，成熟后香气明显。软桃要挑香气足、果皮颜色过渡自然的，买回家后尽快吃，避免挤压。</p>
+            <div class="tags"><span>多汁</span><span>香气足</span></div>
+          </div>
+        </article>
+
+        <article class="variety" data-type="nectarine">
+          <div class="thumb">
+            <svg viewBox="0 0 200 120" role="img" aria-label="油桃插画">
+              <circle cx="100" cy="70" r="38" fill="#f08a5d"/>
+              <circle cx="88" cy="57" r="10" fill="#f8c3a4" opacity=".85"/>
+              <path d="M100 36c3-8 10-12 16-11-2 8-8 12-16 13z" fill="#6a9e46"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="season">初夏至初秋</span>
+            <h3>油桃</h3>
+            <p>表皮光滑无绒毛，颜色偏红亮。挑选时看表皮是否完整有光泽，避免有暗斑或明显软陷的果子。</p>
+            <div class="tags"><span>光滑表皮</span><span>甜度高</span></div>
+          </div>
+        </article>
+
+        <article class="variety" data-type="crisp">
+          <div class="thumb">
+            <svg viewBox="0 0 200 120" role="img" aria-label="毛桃插画">
+              <circle cx="100" cy="70" r="38" fill="#e2586f"/>
+              <circle cx="88" cy="57" r="11" fill="#f7a9b4" opacity=".7"/>
+              <path d="M100 36c3-9 11-13 18-12-2 9-9 14-18 15z" fill="#6a9e46"/>
+              <g fill="#fff" opacity=".55">
+                <circle cx="118" cy="80" r="2"/><circle cx="80" cy="86" r="2"/>
+                <circle cx="112" cy="52" r="2"/><circle cx="86" cy="48" r="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="season">夏末偏多</span>
+            <h3>毛桃</h3>
+            <p>绒毛完整是新鲜的信号之一。挑选时轻拂绒毛看是否易掉，果缝两侧饱满、果蒂周围无褐变的更值得带走。</p>
+            <div class="tags"><span>绒毛完整</span><span>风味浓</span></div>
+          </div>
+        </article>
+
+        <article class="variety" data-type="soft">
+          <div class="thumb">
+            <svg viewBox="0 0 200 120" role="img" aria-label="黄桃插画">
+              <circle cx="100" cy="70" r="38" fill="#f2b13c"/>
+              <circle cx="88" cy="58" r="11" fill="#f8d68f" opacity=".85"/>
+              <path d="M100 36c3-9 11-13 18-12-2 9-9 14-18 15z" fill="#6a9e46"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="season">盛夏</span>
+            <h3>黄桃</h3>
+            <p>果肉偏黄、酸甜平衡，适合鲜食也常被用来做罐头。鲜食挑选以果形端正、香气清甜、无明显机械伤为准。</p>
+            <div class="tags"><span>酸甜平衡</span><span>果形端正</span></div>
+          </div>
+        </article>
+
+        <article class="variety" data-type="nectarine">
+          <div class="thumb">
+            <svg viewBox="0 0 200 120" role="img" aria-label="蟠桃插画">
+              <ellipse cx="100" cy="72" rx="44" ry="30" fill="#e8576b"/>
+              <ellipse cx="88" cy="60" rx="12" ry="8" fill="#f7a9b4" opacity=".75"/>
+              <path d="M100 42c3-8 10-12 16-11-2 8-8 12-16 13z" fill="#6a9e46"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="season">夏末至初秋</span>
+            <h3>蟠桃</h3>
+            <p>果形扁平，果核小、果肉厚。挑选时注意扁果的两面是否对称饱满，轻按有回弹、无空软感的品质更稳。</p>
+            <div class="tags"><span>果形扁平</span><span>果肉厚</span></div>
+          </div>
+        </article>
+
+        <p class="empty-tip" id="emptyTip" hidden>这个分类下暂时没有条目，换个标签看看。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section id="checklist">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Checklist</div>
+        <h2>到手之后，五项验货要点</h2>
+        <p>摊位上挑得好，回家还要会验。91挑桃把验货拆成五项，逐条过一遍，坏果就能尽早被发现。</p>
+      </div>
+
+      <div class="check-layout">
+        <div class="check-art">
+          <svg viewBox="0 0 320 300" role="img" aria-label="验货清单与鲜桃的插画">
+            <rect x="34" y="26" width="180" height="230" rx="14" fill="#ffffff" stroke="#eee2dd"/>
+            <rect x="58" y="46" width="52" height="14" rx="7" fill="#e8576b"/>
+            <g stroke="#d9cbc6" stroke-width="7" stroke-linecap="round">
+              <path d="M58 92h132"/><path d="M58 126h132"/>
+              <path d="M58 160h104"/><path d="M58 194h120"/>
+            </g>
+            <g fill="#84b95c">
+              <circle cx="70" cy="92" r="9"/><circle cx="70" cy="126" r="9"/>
+              <circle cx="70" cy="160" r="9"/>
+            </g>
+            <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+              <path d="M65 92l4 4 7-8"/><path d="M65 126l4 4 7-8"/>
+            </g>
+            <circle cx="238" cy="204" r="46" fill="#e8576b"/>
+            <circle cx="222" cy="186" r="13" fill="#f7a9b4" opacity=".75"/>
+            <path d="M238 158c4-11 14-16 22-15-3 12-11 17-22 18z" fill="#6a9e46"/>
+            <circle cx="272" cy="252" r="20" fill="#f08a5d"/>
+          </svg>
+        </div>
+
+        <ol class="check-list">
+          <li>
+            <span class="mark" aria-hidden="true">1</span>
+            <div><h3>看果缝</h3><p>果缝两侧饱满、颜色过渡自然，说明发育均匀；果缝发暗或凹陷，往往意味着内部已经起变化。</p></div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">2</span>
+            <div><h3>闻果蒂</h3><p>靠近果蒂闻一闻，成熟果子有清甜香气；只有青味或没有味道，多半还没到最佳食用期。</p></div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">3</span>
+            <div><h3>轻按肩部</h3><p>用手指轻按果肩，有均匀回弹说明软硬合适；一按就陷或硬得发木，都不理想。</p></div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">4</span>
+            <div><h3>查表皮伤</h3><p>看有无磕碰压痕、虫眼与褐色斑块。轻微擦伤可以尽快吃掉，但大面积软陷建议直接放弃。</p></div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">5</span>
+            <div><h3>分批存放</h3><p>软硬分开装，软的先吃；不要一次全洗，吃前再洗，能减少表皮损伤带来的腐坏。</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt-bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">FAQ</div>
+        <h2>关于挑桃的常见疑问</h2>
+        <p>这些问题在逛市场时最常被问到。91挑桃把回答控制在能立刻用上的范围，不绕弯子。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>桃子是不是越红越甜？</summary>
+          <p>不是。颜色主要反映品种与光照，甜度还要看香气和手感。同一品种里，颜色过渡自然、果缝饱满、闻起来有清香的，通常比单纯红得发亮的更可靠。</p>
+        </details>
+        <details>
+          <summary>脆桃买回家放软了还能吃吗？</summary>
+          <p>可以吃，但口感会从脆转向绵软，风味也会变化。如果想保持脆感，买回后放阴凉通风处，避免和已经熟透的果子混装。</p>
+        </details>
+        <details>
+          <summary>油桃和毛桃怎么快速区分？</summary>
+          <p>最直接的是看表皮：油桃光滑无绒毛、颜色偏红亮；毛桃有细密绒毛，手感略带绒感。两者挑选逻辑接近，但毛桃要额外留意绒毛是否完整。</p>
+        </details>
+        <details>
+          <summary>买多了怎么存放更稳妥？</summary>
+          <p>先按软硬分成两批，软的先吃、硬的常温放。不要提前全部清洗，吃前再冲洗；装袋时留出透气空间，避免挤压堆叠。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="wrap">
+      <div class="download-band">
+        <div>
+          <h2>把 91挑桃 的挑选清单带在身边</h2>
+          <p>整理了三步挑选顺序、六类品种要点与五项验货清单，打印或存在手机里都方便。逛市场前扫一眼，判断会更有底。</p>
+        </div>
+        <div>
+          <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" role="button" aria-label="下载91挑桃挑选清单（暂不可用）">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 21h14"/>
+            </svg>
+            下载
+          </a>
+          <small>清单页面整理中，下载入口即将开放</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="40" r="19" fill="#e8576b"/>
+            <path d="M32 21c2-8 10-12 16-11-2 8-8 13-16 14z" fill="#6a9e46"/>
+            <path d="M32 24c-3-6-9-9-15-8 3 7 8 10 15 11z" fill="#84b95c"/>
+          </svg>
+          <span class="logo-text">91挑桃</span>
+        </div>
+        <p>专注鲜桃挑选与选购的指南站点，按季节、品种与手感组织判断顺序，帮你在挑桃时少走弯路。</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#steps">三步挑选顺序</a></li>
+          <li><a href="#varieties">品种风味筛选</a></li>
+          <li><a href="#checklist">到手验货要点</a></li>
+          <li><a href="#faq">常见疑问</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>使用提示</h3>
+        <ul>
+          <li><a href="#download">挑选清单下载</a></li>
+          <li><a href="#top">回到页面顶部</a></li>
+        </ul>
+        <p style="margin-top:12px;font-size:13px;">页面内容用于日常挑选参考，具体品质以实际果品为准。</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 91挑桃 · 鲜桃挑选指南</span>
+      <span>91挑桃 · 按季节与品种挑桃</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('mainNav');
+    if(toggle && nav){
+      toggle.addEventListener('click', function(){
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.addEventListener('click', function(e){
+        if(e.target.tagName === 'A'){
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded','false');
+        }
+      });
+    }
+
+    var chips = document.querySelectorAll('.chip');
+    var cards = document.querySelectorAll('.variety');
+    var emptyTip = document.getElementById('emptyTip');
+
+    chips.forEach(function(chip){
+      chip.addEventListener('click', function(){
+        chips.forEach(function(c){ c.classList.remove('active'); });
+        chip.classList.add('active');
+        var key = chip.getAttribute('data-filter');
+        var shown = 0;
+        cards.forEach(function(card){
+          var match = (key === 'all') || (card.getAttribute('data-type') === key);
+          card.style.display = match ? '' : 'none';
+          if(match) shown++;
+        });
+        if(emptyTip){ emptyTip.hidden = shown !== 0; }
+      });
+    });
+  })();
+</script>
+</body>
+  </html>
